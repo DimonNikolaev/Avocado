@@ -1,0 +1,18 @@
+img[src="assets/img/nutrition-program/item-2.png"]{
+  width: 100%;
+}
+
+
+.nutrition-program{
+  color: $linkPageColor;
+  &__title{
+    text-align: center;
+  }
+  &__content{
+    padding-top: 65px;
+    text-align: center;
+    &_description{
+      line-height: 20px;
+    }
+  }
+}

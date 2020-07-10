@@ -1,0 +1,30 @@
+.main{
+  padding: 80px 0 85px 0;
+  background-color: $bgColorBlock;
+  background-image: url("../assets/img/main/bg-main.svg");
+  background-position: right 13px;
+  background-repeat: no-repeat;
+  z-index: 0;
+  position: relative;
+  &:after{
+    content: url("../assets/img/main/image-food.png");
+    position: absolute;
+    right: 0;
+    top: 40px;
+  }
+  &__title{
+    color: white;
+    line-height: 19px;
+  }
+  &__description{
+    line-height: 36px;
+    max-width: 692px;
+  }
+  &__btn{
+    color: $bgColorBlock;
+    background-color: white;
+    width: 217px;
+    height: 54px;
+    font-size: calc(1rem + 8px);
+  }
+}

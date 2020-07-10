@@ -1,0 +1,33 @@
+.who-this-working{
+  display: grid;
+  grid-template-columns: repeat(4, 214px);
+  grid-gap: 83px;
+  align-items: baseline;
+  padding-top: 44px;
+  &__title{
+    color: black;
+    text-align: center;
+  }
+  &__icon{
+    background-color: $bgColorBlock;
+    width: 106px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    &_title{
+      color: black;
+      text-align: center;
+      font-size: calc(1rem + 2px);
+      line-height: 25px;
+    }
+  }
+  &__wrapper{
+    padding: 95px 0 98px;
+  }
+}
