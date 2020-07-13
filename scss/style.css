@@ -533,23 +533,149 @@ a {
   grid-gap: 10px;
   justify-content: center;
   align-items: center; }
+  .tabs-vertical__buttons:after {
+    content: '(Примерное меню)';
+    font-size: 1em;
+    position: relative;
+    left: 50px;
+    display: block;
+    width: max-content; }
 .tabs-vertical-button {
   font-size: calc(1rem - 2px);
   color: #333333;
   height: 28px;
   display: flex;
   justify-content: center;
-  align-items: center; }
-.tabs-vertical__content {
-  display: grid;
-  grid-template-columns: repeat(5, 97px);
-  justify-content: center;
-  grid-gap: 10px; }
+  padding-top: 7px; }
 
 .upHoverBlock {
-  transition: .5s; }
-  .upHoverBlock:hover {
-    transform: scale(1.2); }
+  position: relative; }
+  .upHoverBlock:hover img {
+    width: 128px;
+    height: 174px; }
+  .upHoverBlock:hover:after {
+    content: 'Обед';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    right: 0;
+    background: rgba(6, 60, 0, 0.5);
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+    padding-top: 4px; }
+  .upHoverBlock img {
+    display: block; }
+
+.tab-rounded-button {
+  border-color: #a2c600;
+  color: #a2c600; }
+
+.content-flex-images {
+  display: none;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(1, 174px);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  padding-top: 30px; }
+
+#tab-vertical-1:checked ~ .tabs-vertical__buttons .tabs-vertical-button-1 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-1:checked ~ .tabs-vertical__content .content-flex-images-1 {
+  display: grid; }
+
+#tab-vertical-2:checked ~ .tabs-vertical__buttons .tabs-vertical-button-2 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-2:checked ~ .tabs-vertical__content .content-flex-images-2 {
+  display: grid; }
+
+#tab-vertical-3:checked ~ .tabs-vertical__buttons .tabs-vertical-button-3 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-3:checked ~ .tabs-vertical__content .content-flex-images-3 {
+  display: grid; }
+
+#tab-vertical-4:checked ~ .tabs-vertical__buttons .tabs-vertical-button-4 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-4:checked ~ .tabs-vertical__content .content-flex-images-4 {
+  display: grid; }
+
+#tab-vertical-5:checked ~ .tabs-vertical__buttons .tabs-vertical-button-5 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-5:checked ~ .tabs-vertical__content .content-flex-images-5 {
+  display: grid; }
+
+#tab-vertical-6:checked ~ .tabs-vertical__buttons .tabs-vertical-button-6 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-6:checked ~ .tabs-vertical__content .content-flex-images-6 {
+  display: grid; }
+
+#tab-vertical-7:checked ~ .tabs-vertical__buttons .tabs-vertical-button-7 {
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
+  color: white; }
+
+#tab-vertical-7:checked ~ .tabs-vertical__content .content-flex-images-7 {
+  display: grid; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.select {
+  width: 246px; }
+
+.select__gap {
+  border-radius: 20px;
+  border: 1px solid #A2C600;
+  color: #a2c600;
+  padding: 10px 47px 10px 15px;
+  position: relative; }
+  .select__gap:after {
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    margin-top: -3px;
+    height: 1px;
+    width: 10px;
+    background-color: #a2c600;
+    transform: rotate(-45deg); }
+  .select__gap:before {
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+    height: 1px;
+    width: 10px;
+    background-color: #a2c600;
+    transform: rotate(45deg); }
+
+.select__list {
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: 22px 15px 10px 15px; }
+
+.select__item.active {
+  background: url("../assets/img/various/needle.svg") no-repeat; }
 
 .header {
   background-color: #a2c600; }
@@ -645,7 +771,7 @@ a {
     padding: 95px 0 98px; }
 
 img[src="assets/img/nutrition-program/item-2.png"] {
-  width: 100%; }
+  width: 97px; }
 
 .nutrition-program {
   color: #333333; }

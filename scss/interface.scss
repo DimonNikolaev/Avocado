@@ -59,11 +59,12 @@ a {
     font-size: calc(1rem - 2px);
   }
 
-  &-weight{
-    &-normal{
+  &-weight {
+    &-normal {
       font-weight: normal;
     }
-    &-bold{
+
+    &-bold {
       font-weight: bold;
     }
   }
@@ -111,7 +112,8 @@ a {
     text-align: center;
     max-width: 355px;
   }
-  &__content{
+
+  &__content {
     padding: 24px 67px;
   }
 }
@@ -138,6 +140,7 @@ a {
 #tab-1:checked ~ .tabs__buttons .tab-1 {
   background: white;
   color: $bgColorBlock;
+
   &:after {
     content: '';
     display: block;
@@ -149,7 +152,8 @@ a {
     left: -11px;
     top: $positionTopBeforeNutritionProgram;
   }
-  &:before{
+
+  &:before {
     background: $bgColorBlock;
     color: white;
   }
@@ -162,6 +166,7 @@ a {
 #tab-2:checked ~ .tabs__buttons .tab-2 {
   background: white;
   color: $bgColorBlock;
+
   &:after {
     content: '';
     display: block;
@@ -173,7 +178,8 @@ a {
     left: -11px;
     top: $positionTopBeforeNutritionProgram
   }
-  &:before{
+
+  &:before {
     background: $bgColorBlock;
     color: white;
   }
@@ -187,6 +193,7 @@ a {
 #tab-3:checked ~ .tabs__buttons .tab-3 {
   background: white;
   color: $bgColorBlock;
+
   &:after {
     content: '';
     display: block;
@@ -198,7 +205,8 @@ a {
     left: -11px;
     top: $positionTopBeforeNutritionProgram;
   }
-  &:before{
+
+  &:before {
     background: $bgColorBlock;
     color: white;
   }
@@ -211,6 +219,7 @@ a {
 #tab-4:checked ~ .tabs__buttons .tab-4 {
   background: white;
   color: $bgColorBlock;
+
   &:after {
     content: '';
     display: block;
@@ -222,7 +231,8 @@ a {
     left: -11px;
     top: $positionTopBeforeNutritionProgram;
   }
-  &:before{
+
+  &:before {
     background: $bgColorBlock;
     color: white;
   }
@@ -235,6 +245,7 @@ a {
 #tab-5:checked ~ .tabs__buttons .tab-5 {
   background: white;
   color: $bgColorBlock;
+
   &:after {
     content: '';
     display: block;
@@ -246,7 +257,8 @@ a {
     left: -11px;
     top: $positionTopBeforeNutritionProgram;
   }
-  &:before{
+
+  &:before {
     background: $bgColorBlock;
     color: white;
   }
@@ -274,6 +286,7 @@ a {
     display: inline-block;
     width: 86px;
   }
+
   &:nth-child(1):before {
     content: '900 ккал';
   }
@@ -297,42 +310,321 @@ a {
 
 // вертикальные табы
 
-.tabs-vertical{
-  &__buttons{
+.tabs-vertical {
+  &__buttons {
     display: grid;
     grid-template-columns: repeat(7, 28px);
     grid-template-rows: repeat(1, 28px);
     grid-gap: 10px;
     justify-content: center;
     align-items: center;
+
+    &:after {
+      content: '(Примерное меню)';
+      font-size: 1em;
+      position: relative;
+      left: 50px;
+      display: block;
+      width: max-content;
+    }
   }
-  &-button{
+
+  &-button {
     font-size: calc(1rem - 2px);
     color: $linkPageColor;
     height: 28px;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  &__content{
-    display: grid;
-    grid-template-columns: repeat(5, 97px);
-    justify-content: center;
-    grid-gap: 10px;
+    padding-top: 7px;
   }
 }
 
-.upHoverBlock{
-  transition: .5s;
+.upHoverBlock {
+  position: relative;
   &:hover{
-    transform: scale(1.2);
+    & img {
+      width: 128px;
+      height: 174px;
+    }
+    &:after{
+      content: 'Обед';
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      right: 0;
+      background: rgba(6, 60, 0, 0.5);
+      border-radius: 0px 0px 20px 20px;
+      color: white;
+      padding-top: 4px;
+    }
   }
+
+
+  img {
+    display: block;
+  }
+
 }
 
-.tab{
-  &__rounded{
-    &-button{
-
+.tab {
+  &-rounded {
+    &-button {
+      border-color: $bgColorBlock;
+      color: $bgColorBlock;
     }
   }
 }
+
+.content {
+  &-flex {
+    &-images {
+      display: none;
+      grid-template-columns: repeat(5, auto);
+      grid-template-rows: repeat(1, 174px);
+      justify-content: center;
+      align-items: center;
+      grid-gap: 10px;
+      padding-top: 30px;
+    }
+  }
+}
+
+//Активация 1-го вертикального таба
+
+#tab-vertical-1:checked ~ .tabs-vertical__buttons .tabs-vertical-button-1 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-1:checked ~ .tabs-vertical__content .content-flex-images-1 {
+  display: grid;
+}
+
+//Активация 2-го вертикального таба
+
+#tab-vertical-2:checked ~ .tabs-vertical__buttons .tabs-vertical-button-2 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-2:checked ~ .tabs-vertical__content .content-flex-images-2 {
+  display: grid;
+}
+
+//Активация 3-го вертикального таба
+
+#tab-vertical-3:checked ~ .tabs-vertical__buttons .tabs-vertical-button-3 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-3:checked ~ .tabs-vertical__content .content-flex-images-3 {
+  display: grid;
+}
+
+//Активация 4-го вертикального таба
+
+#tab-vertical-4:checked ~ .tabs-vertical__buttons .tabs-vertical-button-4 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-4:checked ~ .tabs-vertical__content .content-flex-images-4 {
+  display: grid;
+}
+
+//Активация 5-го вертикального таба
+
+#tab-vertical-5:checked ~ .tabs-vertical__buttons .tabs-vertical-button-5 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-5:checked ~ .tabs-vertical__content .content-flex-images-5 {
+  display: grid;
+}
+
+//Активация 6-го вертикального таба
+
+#tab-vertical-6:checked ~ .tabs-vertical__buttons .tabs-vertical-button-6 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-6:checked ~ .tabs-vertical__content .content-flex-images-6 {
+  display: grid;
+}
+
+//Активация 7-го вертикального таба
+
+#tab-vertical-7:checked ~ .tabs-vertical__buttons .tabs-vertical-button-7 {
+  background: $bgColorInlineBlock;
+  color: white;
+}
+
+#tab-vertical-7:checked ~ .tabs-vertical__content .content-flex-images-7 {
+  display: grid;
+}
+
+// Стилизация select
+
+//.select{
+//  position: relative;
+//  &:after {
+//    content: "";
+//    display: block;
+//    pointer-events: none;
+//    position: absolute;
+//    top: 50%;
+//    right: 10px;
+//    z-index: 1;
+//    margin-top: -3px;
+//    height: 1px;
+//    width: 10px;
+//    background-color: $bgColorBlock;
+//    transform: rotate(-45deg);
+//  }
+//  &:before{
+//    content: "";
+//    display: block;
+//    pointer-events: none;
+//    position: absolute;
+//    top: 50%;
+//    right: 1rem;
+//    z-index: 1;
+//    margin-top: -3px;
+//    height: 1px;
+//    width: 10px;
+//    background-color: $bgColorBlock;
+//    transform: rotate(45deg);
+//  }
+//  & select {
+//    display: block;
+//    width: 100%; /* от ширины блока div */
+//    padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
+//    background: none; /* убираем фон */
+//    border: 1px solid #ccc; /* рамка */
+//    border-radius: 3px;/* скругление полей формы */
+//    -webkit-appearance: none;/* Chrome */
+//    -moz-appearance: none;/* Firefox */
+//    appearance: none;/* убираем дефолнтные стрелочки */
+//    font-family: inherit;/* наследует от родителя */
+//    font-size: 1rem;
+//    color: #444;
+//    border: 1px solid #A2C600;
+//    box-sizing: border-box;
+//    border-radius: 20px;
+//    color: $bgColorBlock;
+//  }
+//}
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.select {
+  width: 246px;
+}
+//
+//.select-wrap {
+//  max-width: 700px;
+//  width: 100%;
+//  margin: 20px auto;
+//}
+//
+//.select-wrap select {
+//  margin: 20px;
+//}
+//
+.select__gap {
+  border-radius: 20px;
+  border: 1px solid #A2C600;
+  color: $bgColorBlock;
+  padding: 10px 47px 10px 15px;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    margin-top: -3px;
+    height: 1px;
+    width: 10px;
+    background-color: $bgColorBlock;
+    transform: rotate(-45deg);
+  }
+  &:before{
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+    height: 1px;
+    width: 10px;
+    background-color: $bgColorBlock;
+    transform: rotate(45deg);
+  }
+}
+//
+//.on.select__gap,
+//.select__gap:hover {
+//  color: #467797;
+//}
+//
+.select__list {
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: 22px 15px 10px 15px;
+}
+//
+//.select__list.on {
+//  display: block;
+//}
+//
+.select__item.active {
+  background: url("../assets/img/various/needle.svg") no-repeat;
+}
+//
+//.select__item.selected,
+//.select__item span:hover {
+//  color: #467797;
+//}
+//
+//.select__gap:after {
+//  content: '';
+//  display: block;
+//  width: 10px;
+//  height: 10px;
+//  position: absolute;
+//  right: 15px;
+//  top: 50%;
+//  margin-top: -7px;
+//  border-left: 7px solid transparent;
+//  border-right: 7px solid transparent;
+//  border-top: 14px solid #000;
+//
+//  -webkit-transition: all .27s ease-in-out;
+//  -o-transition: all .27s ease-in-out;
+//  transition: all .27s ease-in-out;
+//
+//  -webkit-transform: rotate(0deg);
+//  -ms-transform: rotate(0deg);
+//  -o-transform: rotate(0deg);
+//  transform: rotate(0deg);
+//}
+//
+//.on.select__gap:after {
+//  -webkit-transform: rotate(180deg);
+//  -ms-transform: rotate(180deg);
+//  -o-transform: rotate(180deg);
+//  transform: rotate(180deg);
+//}
