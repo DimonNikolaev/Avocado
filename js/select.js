@@ -52,15 +52,11 @@ $('.select').each(function(){
                 selectList.slideUp(dur);
                 selectGap.removeClass('on');
 
-                $(this).closest('.select__list').find('li').each((item)=>{
-                    $(this).addClass('gavno')
-                    console.log('123')
+                $(this).closest('.select__list').find('li').each(function () {
+                    $(this).removeClass('active');
                 })
 
-
-                setTimeout(()=>{
-                    $(this).addClass('active');
-                }, 500)
+                $(this).addClass('active');
 
             });
 
@@ -73,12 +69,11 @@ $('.select').each(function(){
 });
 
 
-let selectItem = document.querySelectorAll('.select__item');
-let selectGapText = $('.selectGap').html();
-
-selectItem.forEach(item=>{
-
-    if($(item).text() === selectGapText){
-        $(item).addClass('active')
-    }
-})
+// let selectItem = document.querySelectorAll('.select__item');
+// let selectGapText = $('.selectGap').html();
+//
+// selectItem.forEach(item=>{
+//     $(item).removeClass('active');
+//     $(item).addClass('active');
+//
+// })

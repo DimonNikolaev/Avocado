@@ -14,5 +14,18 @@ img[src="assets/img/nutrition-program/item-2.png"]{
     &_description{
       line-height: 20px;
     }
+    &_bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_current-price{
+        font-size: calc(2em - 8px);
+        font-weight: bold;
+      }
+      &_old-price{
+        text-decoration-line: line-through;
+        font-size: calc(1em + 2px);
+      }
+    }
   }
 }

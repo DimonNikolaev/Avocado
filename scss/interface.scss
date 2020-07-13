@@ -2,6 +2,17 @@ $bgColorInlineBlock: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
 $bgColorBlock: #a2c600;
 $linkPageColor: #333333;
 $positionTopBeforeNutritionProgram: -122px;
+@mixin activateVerticalTab($NumVerticalTab, $numDayInVerticalTab){
+  #tab-vertical-#{$NumVerticalTab}-#{$numDayInVerticalTab}:checked ~ .tabs-vertical__buttons .tabs-vertical-button-#{$NumVerticalTab}-#{$numDayInVerticalTab} {
+    background: $bgColorInlineBlock;
+    color: white;
+  }
+
+  #tab-vertical-#{$NumVerticalTab}-#{$numDayInVerticalTab}:checked ~ .tabs-vertical__content .content-flex-images-#{$NumVerticalTab}-#{$numDayInVerticalTab} {
+    display: grid;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -114,7 +125,7 @@ a {
   }
 
   &__content {
-    padding: 24px 67px;
+    padding: 24px 47px;
   }
 }
 
@@ -341,10 +352,16 @@ a {
 
 .upHoverBlock {
   position: relative;
+  img{
+    width: 97px;
+    height: 132px;
+    transition: .3s ease;
+  }
   &:hover{
     & img {
       width: 128px;
       height: 174px;
+      transition: .3s ease;
     }
     &:after{
       content: 'Обед';
@@ -380,7 +397,8 @@ a {
     &-images {
       display: none;
       grid-template-columns: repeat(5, auto);
-      grid-template-rows: repeat(1, 174px);
+      grid-template-rows: repeat(1, 132px);
+      padding-bottom: 52px;
       justify-content: center;
       align-items: center;
       grid-gap: 10px;
@@ -388,135 +406,64 @@ a {
     }
   }
 }
+// Активация вертикальный табов в первой вкладке табов в программе питания
+@include activateVerticalTab(1, 1);
+@include activateVerticalTab(1, 2);
+@include activateVerticalTab(1, 3);
+@include activateVerticalTab(1, 4);
+@include activateVerticalTab(1, 5);
+@include activateVerticalTab(1, 6);
+@include activateVerticalTab(1, 7);
 
-//Активация 1-го вертикального таба
+// Активация вертикальный табов в второй вкладке табов в программе питания
+@include activateVerticalTab(2, 1);
+@include activateVerticalTab(2, 2);
+@include activateVerticalTab(2, 3);
+@include activateVerticalTab(2, 4);
+@include activateVerticalTab(2, 5);
+@include activateVerticalTab(2, 6);
+@include activateVerticalTab(2, 7);
 
-#tab-vertical-1:checked ~ .tabs-vertical__buttons .tabs-vertical-button-1 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-1:checked ~ .tabs-vertical__content .content-flex-images-1 {
-  display: grid;
-}
-
-//Активация 2-го вертикального таба
-
-#tab-vertical-2:checked ~ .tabs-vertical__buttons .tabs-vertical-button-2 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-2:checked ~ .tabs-vertical__content .content-flex-images-2 {
-  display: grid;
-}
-
-//Активация 3-го вертикального таба
-
-#tab-vertical-3:checked ~ .tabs-vertical__buttons .tabs-vertical-button-3 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-3:checked ~ .tabs-vertical__content .content-flex-images-3 {
-  display: grid;
-}
-
-//Активация 4-го вертикального таба
-
-#tab-vertical-4:checked ~ .tabs-vertical__buttons .tabs-vertical-button-4 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-4:checked ~ .tabs-vertical__content .content-flex-images-4 {
-  display: grid;
-}
-
-//Активация 5-го вертикального таба
-
-#tab-vertical-5:checked ~ .tabs-vertical__buttons .tabs-vertical-button-5 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-5:checked ~ .tabs-vertical__content .content-flex-images-5 {
-  display: grid;
-}
-
-//Активация 6-го вертикального таба
-
-#tab-vertical-6:checked ~ .tabs-vertical__buttons .tabs-vertical-button-6 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-6:checked ~ .tabs-vertical__content .content-flex-images-6 {
-  display: grid;
-}
-
-//Активация 7-го вертикального таба
-
-#tab-vertical-7:checked ~ .tabs-vertical__buttons .tabs-vertical-button-7 {
-  background: $bgColorInlineBlock;
-  color: white;
-}
-
-#tab-vertical-7:checked ~ .tabs-vertical__content .content-flex-images-7 {
-  display: grid;
-}
-
-// Стилизация select
-
-//.select{
-//  position: relative;
-//  &:after {
-//    content: "";
-//    display: block;
-//    pointer-events: none;
-//    position: absolute;
-//    top: 50%;
-//    right: 10px;
-//    z-index: 1;
-//    margin-top: -3px;
-//    height: 1px;
-//    width: 10px;
-//    background-color: $bgColorBlock;
-//    transform: rotate(-45deg);
-//  }
-//  &:before{
-//    content: "";
-//    display: block;
-//    pointer-events: none;
-//    position: absolute;
-//    top: 50%;
-//    right: 1rem;
-//    z-index: 1;
-//    margin-top: -3px;
-//    height: 1px;
-//    width: 10px;
-//    background-color: $bgColorBlock;
-//    transform: rotate(45deg);
-//  }
-//  & select {
-//    display: block;
-//    width: 100%; /* от ширины блока div */
-//    padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
-//    background: none; /* убираем фон */
-//    border: 1px solid #ccc; /* рамка */
-//    border-radius: 3px;/* скругление полей формы */
-//    -webkit-appearance: none;/* Chrome */
-//    -moz-appearance: none;/* Firefox */
-//    appearance: none;/* убираем дефолнтные стрелочки */
-//    font-family: inherit;/* наследует от родителя */
-//    font-size: 1rem;
-//    color: #444;
-//    border: 1px solid #A2C600;
-//    box-sizing: border-box;
-//    border-radius: 20px;
-//    color: $bgColorBlock;
-//  }
-//}
+// Активация вертикальный табов в третьей вкладке табов в программе питания
+@include activateVerticalTab(3, 1);
+@include activateVerticalTab(3, 2);
+@include activateVerticalTab(3, 3);
+@include activateVerticalTab(3, 4);
+@include activateVerticalTab(3, 5);
+@include activateVerticalTab(3, 6);
+@include activateVerticalTab(3, 7);
+// Активация вертикальный табов в третьей вкладке табов в программе питания
+@include activateVerticalTab(4, 1);
+@include activateVerticalTab(4, 2);
+@include activateVerticalTab(4, 3);
+@include activateVerticalTab(4, 4);
+@include activateVerticalTab(4, 5);
+@include activateVerticalTab(4, 6);
+@include activateVerticalTab(4, 7);
+// Активация вертикальный табов в третьей вкладке табов в программе питания
+@include activateVerticalTab(5, 1);
+@include activateVerticalTab(5, 2);
+@include activateVerticalTab(5, 3);
+@include activateVerticalTab(5, 4);
+@include activateVerticalTab(5, 5);
+@include activateVerticalTab(5, 6);
+@include activateVerticalTab(5, 7);
+// Активация вертикальный табов в третьей вкладке табов в программе питания
+@include activateVerticalTab(6, 1);
+@include activateVerticalTab(6, 2);
+@include activateVerticalTab(6, 3);
+@include activateVerticalTab(6, 4);
+@include activateVerticalTab(6, 5);
+@include activateVerticalTab(6, 6);
+@include activateVerticalTab(6, 7);
+// Активация вертикальный табов в третьей вкладке табов в программе питания
+@include activateVerticalTab(7, 1);
+@include activateVerticalTab(7, 2);
+@include activateVerticalTab(7, 3);
+@include activateVerticalTab(7, 4);
+@include activateVerticalTab(7, 5);
+@include activateVerticalTab(7, 6);
+@include activateVerticalTab(7, 7);
 
 
 ul {
@@ -527,6 +474,7 @@ ul {
 
 .select {
   width: 246px;
+  position: relative;
 }
 //
 //.select-wrap {
@@ -545,6 +493,7 @@ ul {
   color: $bgColorBlock;
   padding: 10px 47px 10px 15px;
   position: relative;
+  cursor: pointer;
   &:after {
     content: "";
     display: block;
@@ -574,57 +523,27 @@ ul {
     transform: rotate(45deg);
   }
 }
-//
-//.on.select__gap,
-//.select__gap:hover {
-//  color: #467797;
-//}
-//
 .select__list {
   background: #FFFFFF;
   border-radius: 15px;
-  padding: 22px 15px 10px 15px;
+  padding: 22px 15px 10px 18px;
+  width: 246px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50px;
 }
-//
-//.select__list.on {
-//  display: block;
-//}
-//
-.select__item.active {
-  background: url("../assets/img/various/needle.svg") no-repeat;
+.select__item {
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 24px;
+  &.active{
+    background: url("../assets/img/various/needle.svg") no-repeat;
+  }
 }
-//
-//.select__item.selected,
-//.select__item span:hover {
-//  color: #467797;
-//}
-//
-//.select__gap:after {
-//  content: '';
-//  display: block;
-//  width: 10px;
-//  height: 10px;
-//  position: absolute;
-//  right: 15px;
-//  top: 50%;
-//  margin-top: -7px;
-//  border-left: 7px solid transparent;
-//  border-right: 7px solid transparent;
-//  border-top: 14px solid #000;
-//
-//  -webkit-transition: all .27s ease-in-out;
-//  -o-transition: all .27s ease-in-out;
-//  transition: all .27s ease-in-out;
-//
-//  -webkit-transform: rotate(0deg);
-//  -ms-transform: rotate(0deg);
-//  -o-transform: rotate(0deg);
-//  transform: rotate(0deg);
-//}
-//
-//.on.select__gap:after {
-//  -webkit-transform: rotate(180deg);
-//  -ms-transform: rotate(180deg);
-//  -o-transform: rotate(180deg);
-//  transform: rotate(180deg);
-//}
+
+.gradientButtonGreen{
+  background: $bgColorInlineBlock;
+  width: 136px;
+  height: 42px;
+  color: white;
+}
