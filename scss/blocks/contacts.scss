@@ -1,0 +1,40 @@
+.contacts{
+  background: $bgColorInlineBlock;
+  &__content{
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 389px;
+    align-items: center;
+    &_item{
+      margin-bottom: 12px;
+    }
+    &_icons{
+      display: flex;
+      .icon{
+        margin-right: 12px;
+      }
+    }
+    &_address{
+      margin-bottom: 25px;
+    }
+    &_subtitle{
+      display: inherit;
+      flex-direction: column;
+    }
+    &_tel{
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    margin-bottom: 31px;
+  }
+  iframe{
+    position: absolute;
+    right: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.feedback{
+  padding: 85px 0 80px;
+  &__title{
+    text-align: center;
+    margin: 0;
+  }
+  &__content{
+    padding: 65px 0 0;
+  }
+  &__item{
+    margin: 0 15px;
+    img{
+      max-width: 100%;
+    }
+  }
+}

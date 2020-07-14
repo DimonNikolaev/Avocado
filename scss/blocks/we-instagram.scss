@@ -1,0 +1,35 @@
+.we-instagram{
+  padding-bottom: 130px;
+  &__button{
+    width: 185px;
+    height: 42px;
+    display: inline-block;
+    span{
+      padding-top: 8px;
+    }
+    img{
+      margin-right: 3px;
+    }
+
+  }
+  &__title{
+    display: inline-block;
+    vertical-align: sub;
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 365px);
+    grid-gap: 20px;
+    padding-top: 44px;
+  }
+  &__item{
+    position: relative;
+    cursor: pointer;
+    &:hover{
+      .textHover{
+        opacity: 1;
+      }
+    }
+  }
+}

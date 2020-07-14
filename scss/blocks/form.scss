@@ -1,0 +1,87 @@
+$heightItemForForm: 43px;
+$widhtItemForItem: 292px;
+
+// Форма с пробным днем питания
+
+.form{
+  padding: 48px 40px;
+  display: grid;
+  grid-template-rows: 85px repeat(3, $heightItemForForm) 26px;
+  grid-gap: 11px;
+  color: black;
+  box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  &-wrapper{
+    background-image: url("../assets/img/form/bg-image-form.jpg");
+    background-position: center 0px;
+    background-size: cover;
+  }
+  &__subtext{
+    font-size: calc(1em - 6px);
+    width: 392px;
+    text-align: center;
+  }
+  &__input{
+    height: $heightItemForForm;
+    padding-left: calc(2em - 2px);
+    width: $widhtItemForItem;
+    &::placeholder{
+      font-size: calc(1em + 2px);
+    }
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: 472px 741px;
+    grid-gap: 40px;
+    align-items: center;
+    padding: 60px 0 60px;
+  }
+  &__button{
+    width: $widhtItemForItem ;
+  }
+  &__item{
+    margin: 0 auto;
+  }
+  &__title{
+    color: black;
+    text-align: center;
+    margin: 0;
+  }
+  &__right-text{
+    font-size: calc(3rem - 6px);
+    line-height: 48px;
+    font-weight: bold;
+    span{
+      background-color: $bgColorBlock;
+      border-radius: 60px;
+      color: #006838;
+    }
+  }
+}
+
+// Форма с консультацией
+
+.form-consulting{
+  background: url("../assets/img/various/form-bg.svg"), $bgColorBlock;
+  background-position: right 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after{
+    content: url("../assets/img/various/form-bg.png");
+    position: absolute;
+    right: 0;
+    top: -80px;
+
+  }
+  &__content{
+    padding: 90px 0 96px;
+  }
+  &__form{
+    grid-template-rows: 85px repeat(4, 43px) 26px;
+  }
+  &__subtitle{
+    font-size: 1em;
+    margin: 0;
+  }
+}

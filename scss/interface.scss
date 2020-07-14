@@ -2,6 +2,8 @@ $bgColorInlineBlock: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
 $bgColorBlock: #a2c600;
 $linkPageColor: #333333;
 $positionTopBeforeNutritionProgram: -122px;
+$dotsColor: rgba(162, 198, 0, 0.27);
+$colorYellow: #CFCF29;
 @mixin activateVerticalTab($NumVerticalTab, $numDayInVerticalTab){
   #tab-vertical-#{$NumVerticalTab}-#{$numDayInVerticalTab}:checked ~ .tabs-vertical__buttons .tabs-vertical-button-#{$NumVerticalTab}-#{$numDayInVerticalTab} {
     background: $bgColorInlineBlock;
@@ -26,7 +28,9 @@ body {
 .container {
   max-width: 1144px;
   margin: 0 auto;
-  padding: 0 15px;
+  @media (max-width: 1024px) {
+    padding: 0 15px;
+  }
 }
 
 .link {
@@ -40,6 +44,11 @@ body {
 .icon {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
 }
 
 a {
@@ -54,6 +63,7 @@ a {
 .title {
   font-size: calc(2rem + 4px);
   font-weight: bold;
+  margin: 0;
 }
 
 .btn {
@@ -61,6 +71,40 @@ a {
   border: 0;
   font-size: calc(1rem + 2px);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo{
+  &-callback{
+    padding: 20px 5px 0 5px;
+  }
+  &-instagram{
+    &:after{
+
+    }
+  }
+}
+
+.textHover{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 20px 0 20px;
+  opacity: 0;
+  transition: all .3s;
+  p{
+    text-align: center;
+  }
+  span{
+    text-align: center;
+  }
 }
 
 .subtitle {
@@ -543,7 +587,55 @@ ul {
 
 .gradientButtonGreen{
   background: $bgColorInlineBlock;
-  width: 136px;
-  height: 42px;
   color: white;
+}
+
+input.input-form{
+  border-radius: 20px;
+  border: 1px solid $bgColorBlock;
+}
+
+.slick-slider .slick-dots{
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  & li{
+    button{
+      font-size: 0;
+      width: 14px;
+      height: 14px;
+      background-color: $dotsColor;
+      border-radius: 50px;
+      border: 0;
+    }
+    &.slick-active button{
+      background-color: $bgColorBlock;
+    }
+    &:nth-child(1){
+      margin-right: 30px;
+    }
+  }
+}
+
+.article{
+  color: black;
+  &__title{
+    font-size: calc(1em + 2px);
+  }
+  &__description{
+    line-height: 22px;
+    text-align: justify;
+    text-align-last: left;
+  }
+  &__subtitle{
+    margin: 35px 0 20px;
+  }
+}
+
+.date{
+  color: $colorYellow;
+}
+
+.href{
+  color: $colorYellow;
 }
