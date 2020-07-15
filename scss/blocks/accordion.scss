@@ -4,10 +4,10 @@
   &-item {
     margin-bottom: 20px;
     &__input {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
-      opacity: 0;
+      display: none;
       &:checked ~ .accordion-item__trigger{}
       &:checked ~ .accordion-item__trigger .accordion-item__content{
         display: block;

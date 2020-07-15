@@ -6,6 +6,9 @@
   background-repeat: no-repeat;
   z-index: 0;
   position: relative;
+  &-wrapper{
+    padding-top: 81px;
+  }
   &:after{
     content: url("../assets/img/main/image-food.png");
     position: absolute;

@@ -1,0 +1,22 @@
+.footer {
+  &__content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px;
+    color: $bgColorBlock;
+    align-items: center;
+  }
+
+  &__link:first-child {
+    display: grid;
+    justify-items: flex-start;
+  }
+
+  &__link:last-child {
+    display: flex;
+    justify-content: flex-end;
+    a{
+      color: $bgColorBlock;
+    }
+  }
+}
