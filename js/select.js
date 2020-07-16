@@ -36,25 +36,11 @@ $('.select').each(function(){
             .attr('data', selectOption.eq(i).val())
             .attr('data-value-price', $('option[data-value-price]')[i].getAttribute('data-value-price'))
             .appendTo(selectList);
-
-
-        console.log( $('option[data-value-price]')[i].getAttribute('data-value-price'))
-        //dataValuePriceTag = $(selectOption).eq(i)['0'].getAttribute('data-value-price')
-
-        //dataValuePriceTagArr.push(dataValuePriceTag)
-
-        //let selectOptionText = selectOption.eq(i).find('span').text();
-
-        //selectOptionText = dataValuePriceTagArr[i]
-
-        //document.querySelectorAll('.nutrition-program__content_bottom_current-price').forEach((item)=>{
-           // item.textContent   = dataValuePriceTagArr[i]
-        //})
-
     }
     // Find all items
     var selectItem = selectList.find('li');
-
+    let currentPriceTab = $('.nutrition-program__content_bottom_current-price')
+    let oldPriceTab = $('.nutrition-program__content_bottom_old-price')
     selectList.slideUp(0);
     selectGap.on('click', function(){
 
@@ -67,8 +53,11 @@ $('.select').each(function(){
 
                 $('select').val(chooseItem).attr('selected', 'selected');
                 selectGap.text($(this).find('span').text());
+                selectGap.attr('data-value-price', $(this).attr('data-value-price'))
 
-                $('.nutrition-program__content_bottom_current-price').text($(this).html())
+                currentPriceTab.text(selectGap.attr('data-value-price') - 0).append('₽');
+
+                oldPriceTab.text(selectGap.attr('data-value-price') - 500 ).append('₽');
 
                 selectList.slideUp(dur);
                 selectGap.removeClass('on');
@@ -89,13 +78,3 @@ $('.select').each(function(){
     });
 
 });
-
-
-// let selectItem = document.querySelectorAll('.select__item');
-// let selectGapText = $('.selectGap').html();
-//
-// selectItem.forEach(item=>{
-//     $(item).removeClass('active');
-//     $(item).addClass('active');
-//
-// })
