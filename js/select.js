@@ -23,31 +23,52 @@ $('.select').each(function(){
     }).insertAfter(selectGap);
 
     var selectList = selectGap.next('.select__list');
+    //let dataValuePriceTagArr = []
+    //let dataValuePriceTag;
     // Add li - option items
     for(var i = 0; i < selectOptionLength; i++){
         $('<li>',{
             class: 'select__item',
             html: $('<span>',{
-                text: selectOption.eq(i).text()
+                text: selectOption.eq(i).html()
             })
         })
-            .attr('data-value', selectOption.eq(i).val())
+            .attr('data', selectOption.eq(i).val())
+            .attr('data-value-price', $('option[data-value-price]')[i].getAttribute('data-value-price'))
             .appendTo(selectList);
+
+
+        console.log( $('option[data-value-price]')[i].getAttribute('data-value-price'))
+        //dataValuePriceTag = $(selectOption).eq(i)['0'].getAttribute('data-value-price')
+
+        //dataValuePriceTagArr.push(dataValuePriceTag)
+
+        //let selectOptionText = selectOption.eq(i).find('span').text();
+
+        //selectOptionText = dataValuePriceTagArr[i]
+
+        //document.querySelectorAll('.nutrition-program__content_bottom_current-price').forEach((item)=>{
+           // item.textContent   = dataValuePriceTagArr[i]
+        //})
+
     }
     // Find all items
     var selectItem = selectList.find('li');
 
     selectList.slideUp(0);
     selectGap.on('click', function(){
+
         if(!$(this).hasClass('on')){
             $(this).addClass('on');
             selectList.slideDown(dur);
 
             selectItem.on('click', function(){
-                var chooseItem = $(this).data('value');
+                var chooseItem = $(this).data('data-value');
 
                 $('select').val(chooseItem).attr('selected', 'selected');
                 selectGap.text($(this).find('span').text());
+
+                $('.nutrition-program__content_bottom_current-price').text($(this).html())
 
                 selectList.slideUp(dur);
                 selectGap.removeClass('on');
@@ -59,6 +80,7 @@ $('.select').each(function(){
                 $(this).addClass('active');
 
             });
+
 
         } else {
             $(this).removeClass('on');

@@ -7,6 +7,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url(../assets/fonts/stylesheet.css);
+@import url(../assets/fonts/style.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -305,6 +306,12 @@ template {
 [hidden] {
   display: none; }
 
+a:active, a:focus {
+  outline: 0; }
+
+:focus {
+  outline: 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -342,6 +349,8 @@ a {
   justify-content: space-between; }
 
 .title {
+  font-family: "Avenir Next";
+  font-weight: bold;
   font-size: calc(2rem + 4px);
   font-weight: bold;
   margin: 0; }
@@ -408,7 +417,7 @@ a {
   margin-top: 7px;
   margin-left: 23px; }
 .tabs__description {
-  padding: 15px 16px;
+  padding-top: 9px;
   margin: 0;
   text-align: center;
   max-width: 355px; }
@@ -416,7 +425,8 @@ a {
   padding: 24px 47px; }
 
 .tab {
-  font-size: calc(1rem + 2px); }
+  font-size: calc(1rem + 2px);
+  cursor: pointer; }
 
 .content {
   display: none; }
@@ -442,7 +452,7 @@ a {
     position: relative;
     z-index: 1;
     left: -11px;
-    top: -122px; }
+    top: -91px; }
   #tab-1:checked ~ .tabs__buttons .tab-1:before {
     background: #a2c600;
     color: white; }
@@ -462,7 +472,7 @@ a {
     position: relative;
     z-index: 1;
     left: -11px;
-    top: -122px; }
+    top: -91px; }
   #tab-2:checked ~ .tabs__buttons .tab-2:before {
     background: #a2c600;
     color: white; }
@@ -482,7 +492,7 @@ a {
     position: relative;
     z-index: 1;
     left: -11px;
-    top: -122px; }
+    top: -91px; }
   #tab-3:checked ~ .tabs__buttons .tab-3:before {
     background: #a2c600;
     color: white; }
@@ -502,7 +512,7 @@ a {
     position: relative;
     z-index: 1;
     left: -11px;
-    top: -122px; }
+    top: -91px; }
   #tab-4:checked ~ .tabs__buttons .tab-4:before {
     background: #a2c600;
     color: white; }
@@ -522,7 +532,7 @@ a {
     position: relative;
     z-index: 1;
     left: -11px;
-    top: -122px; }
+    top: -91px; }
   #tab-5:checked ~ .tabs__buttons .tab-5:before {
     background: #a2c600;
     color: white; }
@@ -531,8 +541,7 @@ a {
   display: block; }
 
 .cart-options {
-  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%);
-  padding-top: 9px; }
+  background: linear-gradient(90.64deg, #A0C500 -2.66%, #71A742 103.82%); }
   .cart-options:before {
     color: #a2c600;
     content: '';
@@ -543,7 +552,7 @@ a {
     position: relative;
     border: 0.5px solid #a2c600;
     left: -24px;
-    top: -10px;
+    top: -1px;
     display: inline-block;
     width: 86px; }
   .cart-options:nth-child(1):before {
@@ -572,6 +581,7 @@ a {
     display: block;
     width: max-content; }
 .tabs-vertical-button {
+  cursor: pointer;
   font-size: calc(1rem - 2px);
   color: #333333;
   height: 28px;
@@ -1086,6 +1096,8 @@ input.input-form {
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2; }
+  .form-wrapper-all-prob .form-modal {
+    grid-template-rows: 100px repeat(3, 43px) 26px; }
 div .form-modal {
   grid-template-rows: 70px repeat(3, 43px) 26px;
   animation: animateOpenModal .3s ease;
@@ -1106,6 +1118,23 @@ div .form-modal {
   font-size: 31px;
   color: white;
   cursor: pointer; }
+
+.active-modal {
+  display: block;
+  opacity: 1; }
+
+.needle:before, .needle:after {
+  content: '';
+  display: inline-block;
+  height: 2px;
+  width: 9px;
+  background-color: #a2c600; }
+.needle:before {
+  transform: rotate(45deg); }
+.needle:after {
+  transform: rotate(-45deg) translate(-1px, -2px); }
+.needle-active:after, .needle-active:before {
+  transform: rotate(45deg); }
 
 .header {
   background-color: #a2c600; }
@@ -1145,10 +1174,12 @@ div .form-modal {
         color: #333333; }
     .header-max__wrapper {
       background-color: white;
-      position: fixed;
-      z-index: 1;
+      position: sticky;
+      z-index: 2;
       left: 0;
-      right: 0; }
+      right: 0;
+      top: 0;
+      padding: 10px 0; }
 
 .main {
   padding: 80px 0 85px 0;
@@ -1158,8 +1189,6 @@ div .form-modal {
   background-repeat: no-repeat;
   z-index: 0;
   position: relative; }
-  .main-wrapper {
-    padding-top: 81px; }
   .main:after {
     content: url("../assets/img/main/image-food.png");
     position: absolute;
@@ -1249,7 +1278,8 @@ img[src="assets/img/nutrition-program/item-2.png"] {
   .form__input {
     height: 43px;
     padding-left: calc(2em - 2px);
-    width: 292px; }
+    width: 292px;
+    padding-top: 6px; }
     .form__input::placeholder {
       font-size: calc(1em + 2px); }
   .form__content {
@@ -1363,6 +1393,8 @@ img[src="assets/img/nutrition-program/item-2.png"] {
       top: 0;
       left: 0;
       display: none; }
+      .accordion-item__input:checked ~ .accordion-item__trigger .accordion-item__trigger_needle-active {
+        transform: rotate(180deg); }
       .accordion-item__input:checked ~ .accordion-item__trigger .accordion-item__content {
         display: block; }
     .accordion-item__trigger {
@@ -1376,10 +1408,15 @@ img[src="assets/img/nutrition-program/item-2.png"] {
       background-color: #fff;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      margin-bottom: -50px; }
+      margin-bottom: -50px;
+      position: relative; }
       .accordion-item__trigger_last {
         border-radius: 30px;
         padding-bottom: 22px; }
+      .accordion-item__trigger_needle {
+        position: absolute;
+        right: 41px;
+        top: 21px; }
     .accordion-item__content {
       border-top: 0;
       font-size: calc(1em - 2px);

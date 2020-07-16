@@ -25,6 +25,7 @@ $widhtItemForItem: 292px;
     height: $heightItemForForm;
     padding-left: calc(2em - 2px);
     width: $widhtItemForItem;
+    padding-top: 6px;
     &::placeholder{
       font-size: calc(1em + 2px);
     }

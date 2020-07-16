@@ -49,16 +49,17 @@
         justify-self: start;
         align-self: center;
         color: $linkPageColor;
-
       }
     }
 
     &__wrapper {
       background-color: white;
-      position: fixed;
-      z-index: 1;
+      position: sticky;
+      z-index: 2  ;
       left: 0;
       right: 0;
+      top: 0;
+      padding: 10px 0 ;
     }
   }
 }

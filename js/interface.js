@@ -1,23 +1,13 @@
-// Скрипты для фиксирования шапки
+function openAndCloseModal(elemCLickOpen, eleOpenAndClose, eleClickClose = $('.close-button'), ){
 
-let scrollTopHeaderMax = $('.header-max__wrapper')
-
-$(window).scroll(function() {
-    scrollTopHeaderMax.toggleClass('scroll', $(this).scrollTop() > 50);
-});
-
-$('.main__btn').click(()=>{
-    // Открытие модального окна
-    $('.form-wrapper-all').css({
-        display: "block",
-        opacity: 1
+    elemCLickOpen.click(()=>{
+        eleOpenAndClose.addClass('active-modal')
     })
-})
 
-// Закрытие модального окна
-$('.close-button').click(()=>{
-    $('.form-wrapper-all').css({
-        display: "none",
-        opacity: 0
+    eleClickClose.click(()=>{
+        eleOpenAndClose.removeClass('active-modal')
     })
-})
+}
+
+openAndCloseModal($('.header-min__link'), $('.form-wrapper-all-call'));
+openAndCloseModal($('.main__btn'), $('.form-wrapper-all-prob'));

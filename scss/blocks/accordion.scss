@@ -8,7 +8,9 @@
       top: 0;
       left: 0;
       display: none;
-      &:checked ~ .accordion-item__trigger{}
+      &:checked ~ .accordion-item__trigger .accordion-item__trigger_needle-active{
+        transform: rotate(180deg);
+      }
       &:checked ~ .accordion-item__trigger .accordion-item__content{
         display: block;
       }
@@ -26,10 +28,17 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       margin-bottom: -50px;
+      position: relative;
       &_last{
         border-radius: 30px;
         padding-bottom: 22px;
       }
+      &_needle{
+        position: absolute;
+        right: 41px;
+        top: 21px ;
+      }
+
     }
 
     &__content {

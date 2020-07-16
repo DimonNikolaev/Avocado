@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
@@ -17,31 +17,31 @@
             <a href="tel:+7 920 422-27-76" class="link header-min__link">+7 920 422-27-76</a>
             <a href="#" class="link-underline header-min__link">Заказать звонок</a>
             <div class="header-min__icons">
-                <div class="icon header-min__icon"><img src="assets/img/header/instagram.svg" alt="иконка инстаграма">
-                </div>
-                <div class="icon header-min__icon"><img src="assets/img/header/vk.svg" alt="иконка вк"></div>
+                <a href="https://www.instagram.com/avocado_oufa/" class="icon header-min__icon"><img src="assets/img/header/instagram.svg" alt="иконка инстаграма">
+                </a>
+                <a href="https://vk.com/avocado_oufa" class="icon header-min__icon"><img src="assets/img/header/vk.svg" alt="иконка вк"></a>
             </div>
         </div>
 
     </div>
-    <div class="header-max__wrapper">
-        <div class="container">
-            <div class="header-max">
-                <div class="logo header-max__logo">
-                    <img src="assets/img/header/logo.png" alt="логотип">
-                </div>
-                <ul class="nav header-max__nav">
-                    <a href="#" class="link header-max__nav_link">Программы питания</a>
-                    <a href="#" class="link header-max__nav_link">Вопросы и ответы</a>
-                    <a href="#" class="link header-max__nav_link">Блог</a>
-                    <a href="#" class="link header-max__nav_link">Отзывы</a>
-                    <a href="#" class="linktabs-vertical__button header-max__nav_link">Контакты</a>
-                </ul>
-            </div>
-        </div>
-    </div>
 </header>
 <!-- /.header -->
+<div class="header-max__wrapper">
+    <div class="container">
+        <div class="header-max">
+            <div class="logo header-max__logo">
+                <img src="assets/img/header/logo.png" alt="логотип">
+            </div>
+            <ul class="nav header-max__nav">
+                <a href="#" class="link header-max__nav_link">Программы питания</a>
+                <a href="#" class="link header-max__nav_link">Вопросы и ответы</a>
+                <a href="#" class="link header-max__nav_link">Блог</a>
+                <a href="#" class="link header-max__nav_link">Отзывы</a>
+                <a href="#" class="linktabs-vertical__button header-max__nav_link">Контакты</a>
+            </ul>
+        </div>
+    </div>
+</div>
 <main>
     <section class="main-wrapper">
         <div class="main">
@@ -116,13 +116,13 @@
                 </div>
                 <div class="tabs__content rounded rounded-grey">
                     <div class="content content-1">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-1" checked>
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-2">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-3">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-4">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-5">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-6">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-1-7">
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-1" checked>
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-2">
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-3">
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-4">
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-5">
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-6">
+                        <input class="input" type="radio" name="tabs-vertical-1" id="tab-vertical-1-7">
                         <h3 class="subtitle subtitle-weight-bold nutrition-program__content_title">О рационе</h3>
                         <p class="subtitle subtitle-weight-normal link nutrition-program__content_description">Программа
                             питания «Extra Slim 900» включает в себя 3 приема пищи в день на
@@ -274,11 +274,11 @@
                             <div class="nutrition-program__content_bottom">
                                 <div class="select">
                                     <select name="select-box" id="selectId" class="select">
-                                        <option value="1 день - 690 р./день" name="value">1 день - 690 р./день</option>
-                                        <option value="7 дней - 621 р./день" name="value">7 дней - 621 р./день</option>
-                                        <option value="14 дней - 607 р./день" name="value">14 дней - 607 р./день
+                                        <option value="1 день - 690 р./день" name="value" data-value-price="690">1 день - <b>690</b>р./день</option>
+                                        <option value="7 дней - 621 р./день" name="value" data-value-price="621">>7 дней - <b>621</b>р./день</option>
+                                        <option value="14 дней - 607 р./день" name="value" data-value-price="607">14 дней - <b>607</b>р./день
                                         </option>
-                                        <option value="28 дней - 552 р./день" name="value">28 дней - 552 р./день
+                                        <option value="28 дней - 552 р./день" name="value" data-value-price="552">28 дней - <b>552</b>р./день
                                         </option>
                                     </select>
                                 </div>
@@ -290,13 +290,13 @@
                         </div>
                     </div>
                     <div class="content content-2">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-1" checked>
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-2">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-3">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-4">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-5">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-6">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-2-7">
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-1" checked>
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-2">
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-3">
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-4">
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-5">
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-6">
+                        <input class="input" type="radio" name="tabs-vertical-2" id="tab-vertical-2-7">
                         <h3 class="subtitle subtitle-weight-bold nutrition-program__content_title">О рационе</h3>
                         <p class="subtitle subtitle-weight-normal link nutrition-program__content_description">Программа
                             питания «Extra Slim 900» включает в себя 3 приема пищи в день на
@@ -448,11 +448,11 @@
                             <div class="nutrition-program__content_bottom">
                                 <div class="select">
                                     <select name="select-box" id="selectId" class="select">
-                                        <option value="1 день - 690 р./день" name="value">1 день - 690 р./день</option>
-                                        <option value="7 дней - 621 р./день" name="value">7 дней - 621 р./день</option>
-                                        <option value="14 дней - 607 р./день" name="value">14 дней - 607 р./день
+                                        <option value="1 день - 690 р./день" name="value" data-value-price="690">1 день - <b>690</b>р./день</option>
+                                        <option value="7 дней - 621 р./день" name="value" data-value-price="621">>7 дней - <b>621</b>р./день</option>
+                                        <option value="14 дней - 607 р./день" name="value" data-value-price="607">14 дней - <b>607</b>р./день
                                         </option>
-                                        <option value="28 дней - 552 р./день" name="value">28 дней - 552 р./день
+                                        <option value="28 дней - 552 р./день" name="value" data-value-price="552">28 дней - <b>552</b>р./день
                                         </option>
                                     </select>
                                 </div>
@@ -464,13 +464,13 @@
                         </div>
                     </div>
                     <div class="content content-3">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-1" checked>
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-2">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-3">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-4">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-5">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-6">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-3-7">
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-1" checked>
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-2">
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-3">
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-4">
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-5">
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-6">
+                        <input class="input" type="radio" name="tabs-vertical-3" id="tab-vertical-3-7">
                         <h3 class="subtitle subtitle-weight-bold nutrition-program__content_title">О рационе</h3>
                         <p class="subtitle subtitle-weight-normal link nutrition-program__content_description">Программа
                             питания «Extra Slim 900» включает в себя 3 приема пищи в день на
@@ -622,11 +622,11 @@
                             <div class="nutrition-program__content_bottom">
                                 <div class="select">
                                     <select name="select-box" id="selectId" class="select">
-                                        <option value="1 день - 690 р./день" name="value">1 день - 690 р./день</option>
-                                        <option value="7 дней - 621 р./день" name="value">7 дней - 621 р./день</option>
-                                        <option value="14 дней - 607 р./день" name="value">14 дней - 607 р./день
+                                        <option value="1 день - 690 р./день" name="value" data-value-price="690">1 день - <b>690</b>р./день</option>
+                                        <option value="7 дней - 621 р./день" name="value" data-value-price="621">>7 дней - <b>621</b>р./день</option>
+                                        <option value="14 дней - 607 р./день" name="value" data-value-price="607">14 дней - <b>607</b>р./день
                                         </option>
-                                        <option value="28 дней - 552 р./день" name="value">28 дней - 552 р./день
+                                        <option value="28 дней - 552 р./день" name="value" data-value-price="552">28 дней - <b>552</b>р./день
                                         </option>
                                     </select>
                                 </div>
@@ -638,13 +638,13 @@
                         </div>
                     </div>
                     <div class="content content-4">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-1" checked>
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-2">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-3">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-4">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-5">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-6">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-4-7">
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-1" checked>
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-2">
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-3">
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-4">
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-5">
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-6">
+                        <input class="input" type="radio" name="tabs-vertical-4" id="tab-vertical-4-7">
                         <h3 class="subtitle subtitle-weight-bold nutrition-program__content_title">О рационе</h3>
                         <p class="subtitle subtitle-weight-normal link nutrition-program__content_description">Программа
                             питания «Extra Slim 900» включает в себя 3 приема пищи в день на
@@ -796,11 +796,11 @@
                             <div class="nutrition-program__content_bottom">
                                 <div class="select">
                                     <select name="select-box" id="selectId" class="select">
-                                        <option value="1 день - 690 р./день" name="value">1 день - 690 р./день</option>
-                                        <option value="7 дней - 621 р./день" name="value">7 дней - 621 р./день</option>
-                                        <option value="14 дней - 607 р./день" name="value">14 дней - 607 р./день
+                                        <option value="1 день - 690 р./день" name="value" data-value-price="690">1 день - <b>690</b>р./день</option>
+                                        <option value="7 дней - 621 р./день" name="value" data-value-price="621">>7 дней - <b>621</b>р./день</option>
+                                        <option value="14 дней - 607 р./день" name="value" data-value-price="607">14 дней - <b>607</b>р./день
                                         </option>
-                                        <option value="28 дней - 552 р./день" name="value">28 дней - 552 р./день
+                                        <option value="28 дней - 552 р./день" name="value" data-value-price="552">28 дней - <b>552</b>р./день
                                         </option>
                                     </select>
                                 </div>
@@ -812,13 +812,13 @@
                         </div>
                     </div>
                     <div class="content content-5">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-1" checked>
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-2">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-3">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-4">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-5">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-6">
-                        <input class="input" type="radio" name="tabs-vertical" id="tab-vertical-5-7">
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-1"checked >
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-2" >
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-3">
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-4">
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-5">
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-6">
+                        <input class="input" type="radio" name="tabs-vertical-5" id="tab-vertical-5-7">
                         <h3 class="subtitle subtitle-weight-bold nutrition-program__content_title">О рационе</h3>
                         <p class="subtitle subtitle-weight-normal link nutrition-program__content_description">Программа
                             питания «Extra Slim 900» включает в себя 3 приема пищи в день на
@@ -970,11 +970,11 @@
                             <div class="nutrition-program__content_bottom">
                                 <div class="select">
                                     <select name="select-box" id="selectId" class="select">
-                                        <option value="1 день - 690 р./день" name="value">1 день - 690 р./день</option>
-                                        <option value="7 дней - 621 р./день" name="value">7 дней - 621 р./день</option>
-                                        <option value="14 дней - 607 р./день" name="value">14 дней - 607 р./день
+                                        <option value="1 день - 690 р./день" name="value" data-value-price="690">1 день - <b>690</b>р./день</option>
+                                        <option value="7 дней - 621 р./день" name="value" data-value-price="621">>7 дней - <b>621</b>р./день</option>
+                                        <option value="14 дней - 607 р./день" name="value" data-value-price="607">14 дней - <b>607</b>р./день
                                         </option>
-                                        <option value="28 дней - 552 р./день" name="value">28 дней - 552 р./день
+                                        <option value="28 дней - 552 р./день" name="value" data-value-price="552">28 дней - <b>552</b>р./день
                                         </option>
                                     </select>
                                 </div>
@@ -1181,7 +1181,7 @@
                 <div class="accordion-item">
                     <input type="radio" name="accordion" id="accordion-1" class="accordion-item__input">
                     <label for="accordion-1" class="accordion-item__trigger subtitle">
-                        Lorem ipsum dolor sit amet?
+                        Lorem ipsum dolor sit amet? <div class="needle accordion-item__trigger_needle accordion-item__trigger_needle-active"></div>
                         <div class="accordion-item__content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant amet, gravida laoreet non
                             eu.
@@ -1199,7 +1199,7 @@
                 <div class="accordion-item">
                     <input type="radio" name="accordion" id="accordion-2" class="accordion-item__input">
                     <label for="accordion-2" class="accordion-item__trigger subtitle">
-                        Lorem ipsum dolor sit amet?
+                        Lorem ipsum dolor sit amet?<div class="needle accordion-item__trigger_needle accordion-item__trigger_needle-active"></div>
                         <div class="accordion-item__content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant amet, gravida laoreet non
                             eu.
@@ -1216,7 +1216,7 @@
                 <div class="accordion-item">
                     <input type="radio" name="accordion" id="accordion-3" class="accordion-item__input">
                     <label for="accordion-3" class="accordion-item__trigger subtitle">
-                        Lorem ipsum dolor sit amet?
+                        Lorem ipsum dolor sit amet?<div class="needle accordion-item__trigger_needle accordion-item__trigger_needle-active"></div>
                         <div class="accordion-item__content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant amet, gravida laoreet non
                             eu.
@@ -1233,7 +1233,7 @@
                 <div class="accordion-item">
                     <input type="radio" name="accordion" id="accordion-4" class="accordion-item__input">
                     <label for="accordion-4" class="accordion-item__trigger subtitle">
-                        Lorem ipsum dolor sit amet?
+                        Lorem ipsum dolor sit amet?<div class="needle accordion-item__trigger_needle accordion-item__trigger_needle-active"></div>
                         <div class="accordion-item__content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant amet, gravida laoreet non
                             eu.
@@ -1250,7 +1250,7 @@
                 <div class="accordion-item">
                     <input type="radio" name="accordion" id="accordion-5" class="accordion-item__input">
                     <label for="accordion-5" class="accordion-item__trigger subtitle accordion-item__trigger_last">
-                        Lorem ipsum dolor sit amet?
+                        Lorem ipsum dolor sit amet?<div class="needle accordion-item__trigger_needle accordion-item__trigger_needle-active"></div>
                         <div class="accordion-item__content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant amet, gravida laoreet non
                             eu.
@@ -1360,10 +1360,10 @@
                             class="contacts__content_item contacts__content_address">г.Уфа, ул. Бульвар Славы, д. 11</span>
                     </div>
                     <div class="contacts__content_item contacts__content_icons">
-                        <div class="icon"><img src="assets/img/header/instagram.svg"
+                        <a href="https://www.instagram.com/avocado_oufa/" class="icon"><img src="assets/img/header/instagram.svg"
                                                alt="иконка инстаграма">
-                        </div>
-                        <div class="icon"><img src="assets/img/header/vk.svg" alt="иконка вк"></div>
+                        </a>
+                        <a href="https://vk.com/avocado_oufa" class="icon"><img src="assets/img/header/vk.svg" alt="иконка вк"></a>
                     </div>
                 </div>
                 <iframe
@@ -1380,12 +1380,13 @@
     <div class="container">
         <div class="footer__content">
             <span class="footer__link link">Политика конфиденциальности</span>
-            <span class="footer__link link">Разработка и продвижение сайта - <a href="https://ambity.ru/">Амбити</a></span>
+            <span class="footer__link link">Разработка и продвижение сайта - <a
+                href="https://ambity.ru/">Амбити</a></span>
         </div>
     </div>
 </footer>
 
-<div class="form-wrapper-all">
+<div class="form-wrapper-all form-wrapper-all-call">
     <form action="#" class="form rounded form-modal">
         <h2 class="title form__title">Заказать звонок</h2>
         <input class="input-form form__input form__item" type="text" placeholder="Имя">
@@ -1393,7 +1394,25 @@
         <button class="btn gradientButtonGreen form__button form__item">
             <span>Заказать</span>
         </button>
-        <p class="subtitle form__subtext form-modal__subtext">Нажимая на кнопку "Заказать", я даю свое согласие на обработку
+        <p class="subtitle form__subtext form-modal__subtext">Нажимая на кнопку "Заказать", я даю свое согласие на
+            обработку
+            персональных данных и принимаю условия соглашения</p>
+    </form>
+    <div class="close-button">
+        &#10006;
+    </div>
+</div>
+
+<div class="form-wrapper-all form-wrapper-all-prob">
+    <form action="#" class="form rounded form-modal">
+        <h2 class="title form__title">Заказать пробный день</h2>
+        <input class="input-form form__input form__item" type="text" placeholder="Имя">
+        <input class="input-form form__input form__item" type="text" placeholder="Телефон">
+        <button class="btn gradientButtonGreen form__button form__item">
+            <span>Заказать</span>
+        </button>
+        <p class="subtitle form__subtext form-modal__subtext">Нажимая на кнопку "Заказать", я даю свое согласие на
+            обработку
             персональных данных и принимаю условия соглашения</p>
     </form>
     <div class="close-button">
