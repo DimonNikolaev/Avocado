@@ -29,6 +29,7 @@
       border-bottom-right-radius: 0;
       margin-bottom: -50px;
       position: relative;
+      cursor: pointer;
       &_last{
         border-radius: 30px;
         padding-bottom: 22px;
@@ -36,7 +37,8 @@
       &_needle{
         position: absolute;
         right: 41px;
-        top: 21px ;
+        top: 21px;
+        transition: all .5s;
       }
 
     }

@@ -54,6 +54,12 @@ body {
   justify-content: center;
   width: 31px;
   height: 31px;
+  &:hover{
+    path{
+      fill: $bgColorBlock;
+    }
+    background-color: white;
+  }
 }
 
 a {

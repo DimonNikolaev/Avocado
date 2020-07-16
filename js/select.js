@@ -1,5 +1,9 @@
 $('.select').each(function(){
     // Variables
+    let currentPriceTab = $('.nutrition-program__content_bottom_current-price')
+    currentPriceTab.text('0')
+    let oldPriceTab = $('.nutrition-program__content_bottom_old-price')
+    oldPriceTab.text('')
     var $this = $(this),
         selectOption = $this.find('option'),
         selectOptionLength = selectOption.length,
@@ -12,7 +16,7 @@ $('.select').each(function(){
     // Style box
     $('<div>',{
         class: 'select__gap',
-        text: '7 дней - 621р./день'
+        text: 'Выбрать'
     }).insertAfter($this);
 
     var selectGap = $this.next('.select__gap'),
@@ -39,8 +43,6 @@ $('.select').each(function(){
     }
     // Find all items
     var selectItem = selectList.find('li');
-    let currentPriceTab = $('.nutrition-program__content_bottom_current-price')
-    let oldPriceTab = $('.nutrition-program__content_bottom_old-price')
     selectList.slideUp(0);
     selectGap.on('click', function(){
 
@@ -75,6 +77,11 @@ $('.select').each(function(){
             $(this).removeClass('on');
             selectList.slideUp(dur);
         }
-    });
 
+    });
+    $('.tab').on('click', ()=>{
+        currentPriceTab.text(''), oldPriceTab.text(''), $('.select__gap').text('Выбрать')
+    })
 });
+
+
